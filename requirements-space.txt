@@ -1,0 +1,9 @@
+anthropic==0.97.0
+pinecone==7.3.0
+sentence-transformers==3.4.1
+streamlit==1.44.0
+pydantic==2.13.3
+pydantic-settings==2.14.0
+loguru==0.7.3
+numpy==2.4.4
+torch==2.6.0

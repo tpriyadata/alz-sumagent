@@ -1,0 +1,47 @@
+# Secrets
+.env
+.env.*
+*.env
+
+# Data — never commit
+data/
+*.json
+*.csv
+*.pkl
+*.faiss
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model cache
+.cache/
+*.bin
+*.pt
+*.safetensors
+
+# Pytest
+.pytest_cache/
+.coverage
+
+# Personal context
+CLAUDE_CONTEXT.md
+# Local-only scripts
+scripts/generate_report.py
+settings_guide.md
+
+# Generated reports
+reports/

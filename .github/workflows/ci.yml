@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+
+      - name: Install lightweight dependencies
+        run: pip install -r requirements-ci.txt
+
+
+      - name: Unit tests (mocked store and LLM; no API keys needed)
+        env:
+          ANTHROPIC_API_KEY: sk-ant-test123456789
+          PINECONE_API_KEY: pcsk_test123456789
+        run: pytest
